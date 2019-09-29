@@ -9,8 +9,8 @@
  *
  */
 /*#include guards for recursive inclusion..................*/
-#ifndef INCLUDE_PIDCONTROL_H_
-#define INCLUDE_PIDCONTROL_H_
+#ifndef INCLUDE_PIDCONTROL_HPP_
+#define INCLUDE_PIDCONTROL_HPP_
 
 /*Header Files.............................................*/
 #include<iostream>
@@ -30,6 +30,7 @@ class PIDControl {
   double ki;
   double kd;
   double dt;
+
  public:
   /*
    * @brief PIDControl Constructor
@@ -95,4 +96,4 @@ class PIDControl {
   virtual ~PIDControl();
 };
 
-#endif /* INCLUDE_PIDCONTROL_H_ */
+#endif  // INCLUDE_PIDCONTROL_HPP_

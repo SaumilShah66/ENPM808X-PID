@@ -15,37 +15,37 @@
 
 // Class instance is created here which will be used for the test
 PIDControl PID(0.1, 0.1, 0.1, 0.1);
-double val=1.1;
+double val = 1.1;
 
 /** 
  * @brief Test for setKp() function of the PidControl class.
  * It checks whether the values set by the user and the values obtained by 
  * getKp() function are same or not.
  */
- TEST(CheckGetterSetter, CheckKp) {
-   PID.setKp(val);
+TEST(CheckGetterSetter, CheckKp) {
+  PID.setKp(val);
   EXPECT_EQ(PID.getKp(), val);
- }
+}
 
 /** 
  * @brief Test for setKd() function of the PidControl class.
  * It checks whether the values set by the user and the values obtained by 
  * getKd() function are same or not.
  */
- TEST(CheckGetterSetter, CheckKd) {
-   PID.setKd(val);
-   EXPECT_EQ(PID.getKd(), val);
- }
+TEST(CheckGetterSetter, CheckKd) {
+  PID.setKd(val);
+  EXPECT_EQ(PID.getKd(), val);
+}
 
 /** 
  * @brief Test for setKi() function of the PidControl class.
  * It checks whether the values set by the user and the values obtained by 
  * getKi() function are same or not.
  */
- TEST(CheckGetterSetter, CheckKi) {
-   PID.setKi(val);
-   EXPECT_EQ(PID.getKi(), val);
- }
+TEST(CheckGetterSetter, CheckKi) {
+  PID.setKi(val);
+  EXPECT_EQ(PID.getKi(), val);
+}
 
 /** 
  * @brief Test for setDt() function of the PidControl class.
@@ -53,9 +53,9 @@ double val=1.1;
  * getDt() function are same or not.
  */
 TEST(CheckGetterSetter, CheckDi) {
-   PID.setDt(val);
-   EXPECT_EQ(PID.getDt(), val);
- }
+  PID.setDt(val);
+  EXPECT_EQ(PID.getDt(), val);
+}
 
 /** 
  * @brief Test for computeNewVelocity() function of the PidControl class.
@@ -63,11 +63,11 @@ TEST(CheckGetterSetter, CheckDi) {
  * expected values or not.
  */
 TEST(CheckComputeVelocity, CheckValues) {
-	PID.setKi(1);
-	PID.setKp(1);
-	PID.setKd(1);
-	PID.setDt(1);
-	EXPECT_EQ(PID.computeNewVelocity(1,0), 3.0);
-	EXPECT_EQ(PID.computeNewVelocity(1,3), -6.0);
+  PID.setKi(1);
+  PID.setKp(1);
+  PID.setKd(1);
+  PID.setDt(1);
+  EXPECT_EQ(PID.computeNewVelocity(1, 0), 3.0);
+  EXPECT_EQ(PID.computeNewVelocity(1, 3), -6.0);
 }
 

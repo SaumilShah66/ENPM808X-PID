@@ -1,12 +1,10 @@
-// Copyright 2019 Saumil Shah and Shantam Bajpai 
-/**
- *
+// Copyright 2019 Saumil Shah and Shantam Bajpai
+/*
  * @file  PIDControl.hpp
  * @brief class declaration for PID Controller
  * @author Saumil Shah (Driver) and Shantam Bajpai (Navigator)
  * @date  26th September 2019
  * @version 1.0
- *
  */
 
 #include<iostream>
@@ -27,10 +25,10 @@ PIDControl::PIDControl() {
 
 PIDControl::PIDControl(double inputKp, double inputKi, double inputKd,
                        double inputSampleTime) {
-    this->kp = inputKp;
-      this->ki = inputKi;
-      this->kd = inputKd;
-      this->dt = inputSampleTime;
+  this->kp = inputKp;
+  this->ki = inputKi;
+  this->kd = inputKd;
+  this->dt = inputSampleTime;
 }
 
 /**

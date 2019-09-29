@@ -1,6 +1,5 @@
 // Copyright 2019 Saumil Shah and Shantam Bajpai
-/**
- *
+/*
  * @file  main.cpp
  * @brief Main function which uses the class for computation
  * @author Saumil Shah (Driver) and Shantam Bajpai (Navigator)
@@ -9,14 +8,11 @@
  *
  */
 
-
 #include <iostream>
-#include <PIDControl.hpp>
 #include <memory>
 #include<cstdio>
 #include<cstdlib>
+#include <PIDControl.hpp>
 
-int main()
-{
-  
+int main() {
 }
