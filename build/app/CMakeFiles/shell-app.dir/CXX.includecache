@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/PIDControl.hpp
+iostream
+-
+
+/home/saumil/808X/PID/ENPM808X-PID/app/PIDControl.cpp
+iostream
+-
+cstdio
+-
+cstdlib
+-
+PIDControl.hpp
+-
+
+/home/saumil/808X/PID/ENPM808X-PID/app/main.cpp
+iostream
+-
+PIDControl.hpp
+-
+memory
+-
+cstdio
+-
+cstdlib
+-
+
