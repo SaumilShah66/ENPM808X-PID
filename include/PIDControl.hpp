@@ -1,4 +1,4 @@
-// Copyright 2019 Shantam Bajpai and Saumil Shah
+// Copyright 2019 Saumil Shah and Shantam Bajpai
 /**
  *
  * @file  PIDControl.hpp
@@ -17,19 +17,19 @@
 
 /**
  * @brief class for PIDControl
- * @param Kp: Proportional Gain
- * @param Ki: Integral gain
- * @param Kd: Derivative gain
- * @param Dt: Time difference
- * @param TargetVelocity: Velocity that we want to achieve
- * @param ActualVelocity: Current velocity
+ * @param kp: Proportional Gain
+ * @param ki: Integral gain
+ * @param kd: Derivative gain
+ * @param dt: Time difference
+ * @param targetVelocity: Velocity that we want to achieve
+ * @param actualVelocity: Current velocity
  */
 class PIDControl {
  private:
-  double Kp;
-  double Ki;
-  double Kd;
-  double Dt;
+  double kp;
+  double ki;
+  double kd;
+  double dt;
  public:
   /*
    * @brief PIDControl Constructor
@@ -49,8 +49,8 @@ class PIDControl {
 
   /*
    * @brief Method to Compute Velocity
-   * @param TargetVelocity: Velocity that we want to achieve
-   * @param ActualVelocity: Current velocity
+   * @param targetVelocity: Velocity that we want to achieve
+   * @param actualVelocity: Current velocity
    */
   double computeNewVelocity(double targetVelocity, double actualVelocity);
   /*
@@ -72,7 +72,7 @@ class PIDControl {
    * @brief Setter method for sample time
    * @input_SampleTime : Sample time for PID Controller
    */
-  bool setDt(double inputSampleTime);
+  void setDt(double inputSampleTime);
   /*
    * @brief Getter method for Kp
    */

@@ -1,4 +1,4 @@
-// Copyright 2019 Shantam Bajpai and Saumil Shah
+// Copyright 2019 Saumil Shah and Shantam Bajpai 
 /**
  *
  * @file  PIDControl.hpp
@@ -19,94 +19,92 @@ PIDControl::PIDControl() {
 
 /**
  * @brief Initializes the PIDControl Constructor
- * @param double Kp: inputs Proportional Gain
- * @param double Ki: inputs Integral gain
- * @param double Kd: inputs Derivative gain
+ * @param double kp: inputs Proportional Gain
+ * @param double ki: inputs Integral gain
+ * @param double kd: inputs Derivative gain
  * @return Nothing
  */
 
 PIDControl::PIDControl(double inputKp, double inputKi, double inputKd,
-                       double input_sampleTime)
-    : Kp(inputKp),
-      Ki(inputKi),
-      Kd(inputKd),
-      SampleTime(input_sampleTime) {
+                       double inputSampleTime) {
+    this->kp = inputKp;
+      this->ki = inputKi;
+      this->kd = inputKd;
+      this->dt = inputSampleTime;
 }
 
 /**
- * @brief A setter method to set Kp
- * @param double Kp: The Proportional Gain
+ * @brief A setter method to set kp
+ * @param double kp: The Proportional Gain
  * @return Nothing
  */
 
 void PIDControl::setKp(double inputKp) {
-  // This method sets value of Kp
-  this->Kp = inputKp;
+  // This method sets value of kp
+  this->kp = inputKp;
 }
 
 /**
- * @brief A setter method to set Ki
- * @param double Ki: Integral Gain Value
+ * @brief A setter method to set ki
+ * @param double ki: Integral Gain Value
  * @return nothing
  */
 
 void PIDControl::setKi(double inputKi) {
-  // This method sets value of Ki
-  this->Ki = inputKi;
+  // This method sets value of ki
+  this->ki = inputKi;
 }
 
 /**
- * @brief A setter method to set Ki
- * @param double Kd: Derivative Gain Value
+ * @brief A setter method to set ki
+ * @param double kd: Derivative Gain Value
  * @return nothing
  */
 
 void PIDControl::setKd(double inputKd) {
-  // This method sets value of Kd
-  this->Kd = inputKd;
+  // This method sets value of kd
+  this->kd = inputKd;
 }
 
 /**
  * @brief A setter method to get PID Sample time
- * @param input_SampleTime
- * @return Kp
+ * @param inputSampleTime
+ * @return kp
  */
 
-bool PIDControl::setDt(double inputSampleTime) {
-  // This method should set value of Dt
-  // It can be used to change value of Dt
-  // Value of Dt can be only positive. Return false 
-  // if any other value is passed.
-  return true;
+void PIDControl::setDt(double inputSampleTime) {
+  // This method should set value of dt
+  // It can be used to change value of dt
+  this->dt = inputSampleTime;
 }
 
 /**
  * @brief A getter method to get Ki value
- * @return Kp
+ * @return kp
  */
 
 double PIDControl::getKp() {
-  // Return the value of Kp
-  return this->Kp;
+  // Return the value of kp
+  return this->kp;
 }
 
 /**
  * @brief A getter method to get Ki value
- * @return Ki
+ * @return ki
  */
 double PIDControl::getKi() {
-  // Return the value of Ki
-  return this->Ki;
+  // Return the value of ki
+  return this->ki;
 }
 
 /**
  * @brief A getter method to get Kd
- * @return Kd
+ * @return kd
  */
 
 double PIDControl::getKd() {
-  // Return the value of Kd
-  return this->Kd;
+  // Return the value of kd
+  return this->kd;
 }
 
 /**
@@ -116,13 +114,13 @@ double PIDControl::getKd() {
 
 double PIDControl::getDt() {
   // Return the value of Dt
-  return this->Dt;
+  return this->dt;
 }
 
 /**
  * @brief Method for computing new velocity based on target velocity and actual velocity
- * @param TargetVelocity: Output velocity for the system
- * @param ActualVelocity: Input Velocity for the system
+ * @param targetVelocity: Output velocity for the system
+ * @param actualVelocity: Input Velocity for the system
  * @return New Velocity
  */
 
@@ -133,6 +131,12 @@ double PIDControl::computeNewVelocity(double targetVelocity,
   return 0;
 }
 
+/**
+ * @brief Method for computing error in velocity
+ * @param targetVelocity: Output velocity for the system
+ * @param actualVelocity: Input Velocity for the system
+ * @return Error
+ */
 double calculateError(double targetVelocity, double actualVelocity) {
   // Please write the code to compute the error
   return 0;
@@ -141,8 +145,3 @@ double calculateError(double targetVelocity, double actualVelocity) {
 PIDControl::~PIDControl() {
   std::cout << "Destructor";
 }
-
-
-
-
-
