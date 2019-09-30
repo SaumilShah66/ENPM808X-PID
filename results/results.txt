@@ -1,0 +1,20 @@
+Checked on 30th sep 2019 1:07 PM
+
+saumil@saumil-G5-5587:~/ENPM808X-PID$ cpplint app/*.cpp include/*.hpp test/*.cppDone processing app/main.cpp
+Done processing app/PIDControl.cpp
+Done processing include/PIDControl.hpp
+Done processing test/main.cpp
+Done processing test/test.cpp
+
+saumil@saumil-G5-5587:~/ENPM808X-PID$ cppcheck app/*.cpp include/*.hpp test/*.cpp
+Checking app/PIDControl.cpp...
+1/5 files checked 26% done
+Checking app/main.cpp...
+2/5 files checked 32% done
+Checking include/PIDControl.hpp...
+3/5 files checked 68% done
+Checking test/main.cpp...
+4/5 files checked 72% done
+Checking test/test.cpp...
+5/5 files checked 100% done
+

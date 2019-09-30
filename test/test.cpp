@@ -70,4 +70,11 @@ TEST(checkComputeVelocity, checkValues) {
   EXPECT_EQ(PID.computeNewVelocity(1, 0), 3.0);
   EXPECT_EQ(PID.computeNewVelocity(1, 3), -6.0);
 }
-
+/** 
+ * @brief Test for calculateError() function of the PidControl class.
+ * It verifies that the computed error between set velocity and current 
+ * velocity is correct or not.
+ */
+TEST(checkCalculateError, checkErrorValues) {
+  EXPECT_EQ(PID.calculateError(1, 0), 1.0);
+}
