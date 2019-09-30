@@ -69,12 +69,20 @@ double PIDControl::getDt() {
 double PIDControl::calculateError(double targetVelocity,
                                   double actualVelocity) {
   // Please write the code to compute the error
+  double error = (targetVelocity - actualVelocity);
+  return error;
 }
 
 double PIDControl::computeNewVelocity(double targetVelocity,
                                       double actualVelocity) {
   // Please write the compute method as per
   // mentioned in activity diagram
+  double error = calculateError(targetVelocity, actualVelocity);
+  integralTerm = integralTerm + error*(dt);
+  double finalVel = kp*(error) + ki*(integralTerm) +
+                            kd*((error-previousError)/dt);
+  previousError = error;
+  return finalVel;
 }
 
 PIDControl::~PIDControl() {
