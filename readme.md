@@ -1,6 +1,6 @@
 # PID Controller
 [![Build Status](https://travis-ci.org/SaumilShah66/ENPM808X-PID.svg?branch=master)](https://travis-ci.org/SaumilShah66/ENPM808X-PID)
-[![Coverage Status](https://coveralls.io/repos/github/SaumilShah66/ENPM808X-PID/badge.svg?branch=master)](https://coveralls.io/github/SaumilShah66/ENPM808X-PID?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/SaumilShah66/ENPM808X-PID/badge.svg)](https://coveralls.io/github/SaumilShah66/ENPM808X-PID)
 ---
 
 This respository has been made for Homework purpose only
