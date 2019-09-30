@@ -13,7 +13,7 @@
 #define INCLUDE_PIDCONTROL_HPP_
 
 /*Header Files.............................................*/
-#include<iostream>
+#include <iostream>
 
 /**
  * @brief class for PIDControl
@@ -31,63 +31,79 @@ class PIDControl {
   double kd;
   double dt;
   double previousError;
+  double integralTerm;
+
  public:
   /*
    * @brief PIDControl Constructor
    */
   PIDControl();
 
-  /*
-   * @brief PIDControl Constructor
-   * @param inputKp: Proportional gain
-   * @param inputKi: Integral gain
-   * @param inputKd: Derivative Gain
-   * @param input_SampleTime: SampleTime
+  /**
+   * @brief Initializes the PIDControl Constructor
+   * @param double kp: inputs Proportional Gain
+   * @param double ki: inputs Integral gain
+   * @param double kd: inputs Derivative gain
+   * @return nothing
    */
-
   PIDControl(double inputKp, double inputKi, double inputKd,
              double inputSampleTime);
-
+  /**
+   * @brief Method for computing error in velocity
+   * @param targetVelocity: Output velocity for the system
+   * @param actualVelocity: Input Velocity for the system
+   * @return error
+   */
+  double calculateError(double targetVelocity, double actualVelocity);
   /*
    * @brief Method to Compute Velocity
    * @param targetVelocity: Velocity that we want to achieve
    * @param actualVelocity: Current velocity
+   * @return returns final velocity
    */
   double computeNewVelocity(double targetVelocity, double actualVelocity);
   /*
    * @brief Setter method for kp
    * @param inputKp: Proportional gain
+   * @return nothing
    */
   void setKp(double inputKp);
   /*
    * @brief Setter method for ki
    * @param inputKi: Integral gain
+   * @return nothing
    */
   void setKi(double inputKi);
   /*
    * @brief Setter method for kd
    * @param inputKd: Derivative gain
+   * @return nothing
    */
   void setKd(double inputKd);
-  /*
-   * @brief Setter method for sample time
-   * @input_SampleTime : Sample time for PID Controller
+  /**
+   * @brief A setter method to get PID Sample time
+   * @param inputSampleTime
+   * @return nothing
    */
   void setDt(double inputSampleTime);
-  /*
-   * @brief Getter method for kp
+  /**
+   * @brief A getter method to get ki value
+   * @return kp
    */
   double getKp();
-  /*
-   *@brief Getter method ki
+  /**
+   * @brief A getter method to get ki value
+   * @return ki
    */
   double getKi();
-  /*
-   * @brief Getter method kd
+  /**
+   * @brief A getter method to get kd
+   * @return kd
    */
   double getKd();
-  /*
-   * @brief Getter method for Sample Time
+  /**
+   * @brief A getter method to get Sample Time
+   * @return sampleTime
    */
   double getDt();
   /*

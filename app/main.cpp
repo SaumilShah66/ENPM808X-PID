@@ -10,9 +10,12 @@
 
 #include <iostream>
 #include <memory>
-#include<cstdio>
-#include<cstdlib>
-#include <PIDControl.hpp>
+#include <cstdio>
+#include <cstdlib>
+#include "PIDControl.hpp"
 
 int main() {
+    PIDControl pidObj(2, 3, 4, 0.001);
+    std::cout << "New velocity is: " <<
+    pidObj.computeNewVelocity(12, 2) << std::endl;
 }

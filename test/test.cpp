@@ -22,7 +22,7 @@ double val = 1.1;
  * It checks whether the values set by the user and the values obtained by 
  * getKp() function are same or not.
  */
-TEST(CheckGetterSetter, CheckKp) {
+TEST(checkGetterSetter, checkKp) {
   PID.setKp(val);
   EXPECT_EQ(PID.getKp(), val);
 }
@@ -32,7 +32,7 @@ TEST(CheckGetterSetter, CheckKp) {
  * It checks whether the values set by the user and the values obtained by 
  * getKd() function are same or not.
  */
-TEST(CheckGetterSetter, CheckKd) {
+TEST(checkGetterSetter, checkKd) {
   PID.setKd(val);
   EXPECT_EQ(PID.getKd(), val);
 }
@@ -42,7 +42,7 @@ TEST(CheckGetterSetter, CheckKd) {
  * It checks whether the values set by the user and the values obtained by 
  * getKi() function are same or not.
  */
-TEST(CheckGetterSetter, CheckKi) {
+TEST(checkGetterSetter, checkKi) {
   PID.setKi(val);
   EXPECT_EQ(PID.getKi(), val);
 }
@@ -52,7 +52,7 @@ TEST(CheckGetterSetter, CheckKi) {
  * It checks whether the values set by the user and the values obtained by 
  * getDt() function are same or not.
  */
-TEST(CheckGetterSetter, CheckDi) {
+TEST(checkGetterSetter, checkDi) {
   PID.setDt(val);
   EXPECT_EQ(PID.getDt(), val);
 }
@@ -62,7 +62,7 @@ TEST(CheckGetterSetter, CheckDi) {
  * It verifies that the new velocity computed by the function matches 
  * expected values or not.
  */
-TEST(CheckComputeVelocity, CheckValues) {
+TEST(checkComputeVelocity, checkValues) {
   PID.setKi(1);
   PID.setKp(1);
   PID.setKd(1);

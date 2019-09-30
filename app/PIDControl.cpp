@@ -7,21 +7,13 @@
  * @version 1.0
  */
 
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-#include<PIDControl.hpp>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include "PIDControl.hpp"
 
 PIDControl::PIDControl() {
 }
-
-/**
- * @brief Initializes the PIDControl Constructor
- * @param double kp: inputs Proportional Gain
- * @param double ki: inputs Integral gain
- * @param double kd: inputs Derivative gain
- * @return Nothing
- */
 
 PIDControl::PIDControl(double inputKp, double inputKi, double inputKd,
                        double inputSampleTime) {
@@ -29,46 +21,24 @@ PIDControl::PIDControl(double inputKp, double inputKi, double inputKd,
   this->ki = inputKi;
   this->kd = inputKd;
   this->dt = inputSampleTime;
+  this->previousError = 0;
+  this->integralTerm = 0;
 }
-
-/**
- * @brief A setter method to set kp
- * @param double kp: The Proportional Gain
- * @return Nothing
- */
 
 void PIDControl::setKp(double inputKp) {
   // This method sets value of kp
   this->kp = inputKp;
 }
 
-/**
- * @brief A setter method to set ki
- * @param double ki: Integral Gain Value
- * @return nothing
- */
-
 void PIDControl::setKi(double inputKi) {
   // This method sets value of ki
   this->ki = inputKi;
 }
 
-/**
- * @brief A setter method to set ki
- * @param double kd: Derivative Gain Value
- * @return nothing
- */
-
 void PIDControl::setKd(double inputKd) {
   // This method sets value of kd
   this->kd = inputKd;
 }
-
-/**
- * @brief A setter method to get PID Sample time
- * @param inputSampleTime
- * @return kp
- */
 
 void PIDControl::setDt(double inputSampleTime) {
   // This method should set value of dt
@@ -76,70 +46,36 @@ void PIDControl::setDt(double inputSampleTime) {
   this->dt = inputSampleTime;
 }
 
-/**
- * @brief A getter method to get ki value
- * @return kp
- */
-
 double PIDControl::getKp() {
   // Return the value of kp
   return this->kp;
 }
 
-/**
- * @brief A getter method to get ki value
- * @return ki
- */
 double PIDControl::getKi() {
   // Return the value of ki
   return this->ki;
 }
-
-/**
- * @brief A getter method to get kd
- * @return kd
- */
 
 double PIDControl::getKd() {
   // Return the value of kd
   return this->kd;
 }
 
-/**
- * @brief A getter method to get Sample Time
- * @return SampleTime
- */
-
 double PIDControl::getDt() {
   // Return the value of dt
   return this->dt;
 }
 
-/**
- * @brief Method for computing new velocity based on target velocity and actual velocity
- * @param targetVelocity: Output velocity for the system
- * @param actualVelocity: Input Velocity for the system
- * @return New Velocity
- */
+double PIDControl::calculateError(double targetVelocity,
+                                  double actualVelocity) {
+  // Please write the code to compute the error
+}
 
 double PIDControl::computeNewVelocity(double targetVelocity,
                                       double actualVelocity) {
   // Please write the compute method as per
-  // mentioned in acivity diagram
-  return 0;
-}
-
-/**
- * @brief Method for computing error in velocity
- * @param targetVelocity: Output velocity for the system
- * @param actualVelocity: Input Velocity for the system
- * @return Error
- */
-double calculateError(double targetVelocity, double actualVelocity) {
-  // Please write the code to compute the error
-  return 0;
+  // mentioned in activity diagram
 }
 
 PIDControl::~PIDControl() {
-  std::cout << "Destructor";
 }
