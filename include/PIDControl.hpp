@@ -30,7 +30,7 @@ class PIDControl {
   double ki;
   double kd;
   double dt;
-
+  double previousError;
  public:
   /*
    * @brief PIDControl Constructor
