@@ -77,7 +77,7 @@ void PIDControl::setDt(double inputSampleTime) {
 }
 
 /**
- * @brief A getter method to get Ki value
+ * @brief A getter method to get ki value
  * @return kp
  */
 
@@ -87,7 +87,7 @@ double PIDControl::getKp() {
 }
 
 /**
- * @brief A getter method to get Ki value
+ * @brief A getter method to get ki value
  * @return ki
  */
 double PIDControl::getKi() {
@@ -96,7 +96,7 @@ double PIDControl::getKi() {
 }
 
 /**
- * @brief A getter method to get Kd
+ * @brief A getter method to get kd
  * @return kd
  */
 
@@ -111,7 +111,7 @@ double PIDControl::getKd() {
  */
 
 double PIDControl::getDt() {
-  // Return the value of Dt
+  // Return the value of dt
   return this->dt;
 }
 

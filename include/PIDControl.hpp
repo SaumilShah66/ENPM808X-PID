@@ -55,17 +55,17 @@ class PIDControl {
    */
   double computeNewVelocity(double targetVelocity, double actualVelocity);
   /*
-   * @brief Setter method for Kp
+   * @brief Setter method for kp
    * @param inputKp: Proportional gain
    */
   void setKp(double inputKp);
   /*
-   * @brief Setter method for Ki
+   * @brief Setter method for ki
    * @param inputKi: Integral gain
    */
   void setKi(double inputKi);
   /*
-   * @brief Setter method for Kd
+   * @brief Setter method for kd
    * @param inputKd: Derivative gain
    */
   void setKd(double inputKd);
@@ -75,15 +75,15 @@ class PIDControl {
    */
   void setDt(double inputSampleTime);
   /*
-   * @brief Getter method for Kp
+   * @brief Getter method for kp
    */
   double getKp();
   /*
-   *@brief Getter method Ki
+   *@brief Getter method ki
    */
   double getKi();
   /*
-   * @brief Getter method Kd
+   * @brief Getter method kd
    */
   double getKd();
   /*
